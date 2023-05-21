@@ -35,7 +35,7 @@ df.insert(4, "Moving average 200", ma200)
 
 
 st.subheader('Closing Price Vs Time Chart with 100 Moving Average')
-fig = px.line(df, x=['Date'], y=['Close', 'Moving average 100'])
+fig = px.line(df, x=df.Date, y=['Close', 'Moving average 100'])
 st.write(fig)
 
 st.subheader('Closing Price Vs Time Chart with 200 Moving Average')
