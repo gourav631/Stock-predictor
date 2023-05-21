@@ -57,7 +57,7 @@ model = load_model('sales_model.h5')  # Loding the Model
 
 ############################################################### Testing #####################################################################
 past_100_days = data_training.tail(100)
-final_df = pd.concat(past_100_days, pd.DataFrame([data_testing]), ignore_index=True)
+final_df = pd.concat(past_100_days, data_testing, ignore_index=True)
 input_data = scaler.fit_transform(final_df)
 
 x_test = []
