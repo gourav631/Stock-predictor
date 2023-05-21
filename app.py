@@ -18,7 +18,7 @@ st.title('Stock Trend Prediction')
 stocks = pd.read_csv('Output 2.csv')
 stocks_list = stocks['Ticker'].values.tolist()
 
-yf.pdr_override()
+yf.pdr.override()
 user_input = st.selectbox("Enter Stock Ticker", stocks_list, 0)
 df = pdr.DataReader(user_input, start, end)
 df = df.reset_index()
